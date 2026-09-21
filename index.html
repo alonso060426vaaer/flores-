@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Un ramo de girasoles para BANCES</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Great+Vibes&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- interruptor del regalo: al tocarlo se abre (sin JavaScript) -->
+<input type="checkbox" id="abrir" class="trigger" autocomplete="off" aria-label="Abrir el regalo">
+
+<div class="stage">
+
+  <!-- luz cálida y bokeh de fondo -->
+  <div class="glow" aria-hidden="true"></div>
+  <div class="bokeh" aria-hidden="true">
+    <span style="--bx:8%;--by:18%;--bs:120px;--bd:0s"></span>
+    <span style="--bx:88%;--by:12%;--bs:90px;--bd:3s"></span>
+    <span style="--bx:18%;--by:78%;--bs:150px;--bd:6s"></span>
+    <span style="--bx:78%;--by:70%;--bs:110px;--bd:2s"></span>
+    <span style="--bx:50%;--by:6%;--bs:70px;--bd:8s"></span>
+    <span style="--bx:64%;--by:88%;--bs:80px;--bd:5s"></span>
+  </div>
+
+  <!-- ========== EL REGALO ========== -->
+  <label class="gift" for="abrir">
+    <span class="halo"></span>
+
+    <span class="sparks">
+      <i style="--sx:-128px;--sy:-104px;--ss:17px;--sd:0s"></i>
+      <i style="--sx:118px; --sy:-118px;--ss:13px;--sd:.5s"></i>
+      <i style="--sx:-152px;--sy:14px;  --ss:11px;--sd:1s"></i>
+      <i style="--sx:150px; --sy:-6px;  --ss:16px;--sd:1.5s"></i>
+      <i style="--sx:-96px; --sy:112px; --ss:12px;--sd:.8s"></i>
+      <i style="--sx:104px; --sy:120px; --ss:14px;--sd:1.8s"></i>
+      <i style="--sx:6px;   --sy:-150px;--ss:12px;--sd:1.2s"></i>
+      <i style="--sx:-34px; --sy:150px; --ss:10px;--sd:2.2s"></i>
+    </span>
+
+    <span class="gbox">
+      <span class="lid">
+        <span class="gbow">
+          <span class="gl l"></span>
+          <span class="gl r"></span>
+          <span class="gt t1"></span>
+          <span class="gt t2"></span>
+          <span class="gk"></span>
+        </span>
+      </span>
+      <span class="gbody"></span>
+    </span>
+
+    <span class="call">ábreme</span>
+    <span class="hint">toca el regalo</span>
+  </label>
+
+  <!-- ========== LO QUE APARECE AL ABRIRLO ========== -->
+  <div class="reveal">
+
+  <header class="titles">
+    <p class="kicker">un ramo para ti</p>
+    <h1 class="name">Tilín</h1>
+  </header>
+
+  <!-- ========== EL RAMO ========== -->
+  <div class="scaler">
+   <div class="rise">
+    <div class="sway">
+     <div class="bouquet">
+
+      <!-- papel que se abre por detrás -->
+      <div class="wing left"></div>
+      <div class="wing right"></div>
+
+      <!-- tallos -->
+      <div class="stems">
+        <b class="stem" style="--h:344px;--a:-30deg"></b>
+        <b class="stem" style="--h:352px;--a:29deg"></b>
+        <b class="stem" style="--h:378px;--a:-1deg"></b>
+        <b class="stem" style="--h:234px;--a:-27deg"></b>
+        <b class="stem" style="--h:228px;--a:29deg"></b>
+        <b class="stem" style="--h:268px;--a:-1deg"></b>
+        <b class="stem" style="--h:132px;--a:-22deg"></b>
+        <b class="stem" style="--h:136px;--a:32deg"></b>
+      </div>
+
+      <!-- hojas -->
+      <div class="leaves">
+        <span class="leaf" style="--lx:96px; --ly:300px; --la:-46deg; --ls:1;   --ld:.9s"></span>
+        <span class="leaf" style="--lx:452px;--ly:292px; --la:44deg;  --ls:.95; --ld:1.1s"></span>
+        <span class="leaf" style="--lx:150px;--ly:392px; --la:-28deg; --ls:.8;  --ld:1.3s"></span>
+        <span class="leaf" style="--lx:404px;--ly:398px; --la:26deg;  --ls:.78; --ld:1.5s"></span>
+        <span class="leaf" style="--lx:288px;--ly:414px; --la:8deg;   --ls:.62; --ld:1.2s"></span>
+      </div>
+
+      <!-- girasoles -->
+      <div class="flowers">
+
+        <div class="flower" style="--x:110px;--y:175px;--s:.70;--r:-17deg;--d:.55s;--t:7.4s;--dim:.80">
+          <div class="ring">
+            <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i>
+            <i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i>
+            <i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i>
+          </div>
+          <div class="disc"><em></em></div>
+        </div>
+
+        <div class="flower" style="--x:450px;--y:165px;--s:.70;--r:16deg;--d:.65s;--t:8.1s;--dim:.80">
+          <div class="ring">
+            <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i>
+            <i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i>
+            <i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i>
+          </div>
+          <div class="disc"><em></em></div>
+        </div>
+
+        <div class="flower" style="--x:285px;--y:92px;--s:.74;--r:-3deg;--d:.75s;--t:6.8s;--dim:.86">
+          <div class="ring">
+            <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i>
+            <i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i>
+            <i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i>
+          </div>
+          <div class="disc"><em></em></div>
+        </div>
+
+        <div class="flower" style="--x:175px;--y:265px;--s:.86;--r:-11deg;--d:.35s;--t:7.9s;--dim:.93">
+          <div class="ring">
+            <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i>
+            <i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i>
+            <i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i>
+          </div>
+          <div class="disc"><em></em></div>
+        </div>
+
+        <div class="flower" style="--x:390px;--y:272px;--s:.86;--r:10deg;--d:.45s;--t:7.1s;--dim:.93">
+          <div class="ring">
+            <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i>
+            <i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i>
+            <i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i>
+          </div>
+          <div class="disc"><em></em></div>
+        </div>
+
+        <div class="flower" style="--x:283px;--y:203px;--s:1;--r:2deg;--d:.15s;--t:6.4s;--dim:1">
+          <div class="ring">
+            <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i>
+            <i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i>
+            <i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i>
+          </div>
+          <div class="disc"><em></em></div>
+        </div>
+
+        <div class="flower" style="--x:232px;--y:352px;--s:.88;--r:-7deg;--d:.25s;--t:8.4s;--dim:.97">
+          <div class="ring">
+            <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i>
+            <i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i>
+            <i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i>
+          </div>
+          <div class="disc"><em></em></div>
+        </div>
+
+        <div class="flower" style="--x:350px;--y:358px;--s:.82;--r:8deg;--d:.30s;--t:7.6s;--dim:.97">
+          <div class="ring">
+            <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i>
+            <i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i>
+            <i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i>
+          </div>
+          <div class="disc"><em></em></div>
+        </div>
+
+      </div>
+
+      <!-- papel de envoltura -->
+      <div class="wrap">
+        <span class="crease c1"></span>
+        <span class="crease c2"></span>
+        <span class="crease c3"></span>
+      </div>
+
+      <!-- lazo -->
+      <div class="ribbon">
+        <span class="band"></span>
+        <span class="loop l"></span>
+        <span class="loop r"></span>
+        <span class="tail t1"></span>
+        <span class="tail t2"></span>
+        <span class="knot"></span>
+      </div>
+
+      <!-- tarjetita colgando -->
+      <div class="tag">
+        <span class="string"></span>
+        <span class="card">para ti</span>
+      </div>
+
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <!-- ========== MENSAJES ========== -->
+  <div class="messages">
+    <p style="--m:0">Te quiero mucho, Tilín</p>
+    <p style="--m:1">Amor mío</p>
+    <p style="--m:2">Mi vida</p>
+    <p style="--m:3">Me encantas</p>
+    <p style="--m:4">Eres mi sol</p>
+  </div>
+
+  <p class="footnote">cada girasol mira hacia ti</p>
+
+  </div><!-- /reveal -->
+
+  <!-- polen dorado -->
+  <div class="pollen" aria-hidden="true">
+    <span style="--px:12%;--pd:0s;--pt:13s;--ps:5px"></span>
+    <span style="--px:22%;--pd:4s;--pt:16s;--ps:3px"></span>
+    <span style="--px:31%;--pd:8s;--pt:12s;--ps:4px"></span>
+    <span style="--px:40%;--pd:2s;--pt:15s;--ps:6px"></span>
+    <span style="--px:47%;--pd:10s;--pt:14s;--ps:3px"></span>
+    <span style="--px:56%;--pd:6s;--pt:17s;--ps:5px"></span>
+    <span style="--px:64%;--pd:1s;--pt:13s;--ps:4px"></span>
+    <span style="--px:72%;--pd:9s;--pt:15s;--ps:6px"></span>
+    <span style="--px:81%;--pd:5s;--pt:12s;--ps:3px"></span>
+    <span style="--px:90%;--pd:12s;--pt:16s;--ps:5px"></span>
+    <span style="--px:6%;--pd:7s;--pt:18s;--ps:4px"></span>
+    <span style="--px:96%;--pd:3s;--pt:14s;--ps:4px"></span>
+  </div>
+
+  <!-- palabras que suben flotando -->
+  <div class="whispers" aria-hidden="true">
+    <span style="--wx:16%;--wd:0s">mi vida</span>
+    <span style="--wx:80%;--wd:4s">amor mío</span>
+    <span style="--wx:32%;--wd:8s">me encantas</span>
+    <span style="--wx:70%;--wd:12s">te quiero</span>
+    <span style="--wx:22%;--wd:16s">mi cielo</span>
+    <span style="--wx:84%;--wd:20s">eres mi todo</span>
+  </div>
+
+</div>
+
+</body>
+</html>
