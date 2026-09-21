@@ -71,11 +71,12 @@ body{
 .stage{
   position:relative;
   min-height:100vh;
-  min-height:100dvh;          /* en el celular descuenta la barra del navegador */
+  min-height:100svh;          /* la parte de pantalla SIEMPRE visible en el celular */
   display:flex;
   flex-direction:column;
   align-items:center;
-  justify-content:center;
+  justify-content:flex-start; /* centrar con auto-márgenes, no con justify:
+                                 así, si no entra, se puede desplazar en vez de cortarse */
   gap:6px;
   padding:24px var(--gutter) 30px;
   isolation:isolate;
@@ -138,6 +139,7 @@ body{
   justify-content:center;
   gap:6px;
   width:100%;
+  margin-block:auto;          /* centra si sobra sitio; si no, nada queda cortado */
 }
 
 /* las palabras sueltas entran después */
@@ -908,54 +910,82 @@ body{
   100%{ opacity:0;   transform:translate3d(-14px,-104vh,0) scale(.7); }
 }
 
-.whispers{ position:absolute; inset:0; z-index:2; pointer-events:none; overflow:hidden; }
+.whispers{ position:absolute; inset:0; z-index:7; pointer-events:none; overflow:hidden; }
 .whispers span{
   position:absolute;
   left:var(--wx); bottom:14%;
   font-family:"Great Vibes", cursive;
   font-size:clamp(30px,6.6vw,48px);
   white-space:nowrap;
-  color:rgba(255,226,168,.9);
-  text-shadow:0 0 22px rgba(255,190,90,.55);
+  color:rgba(255,230,176,.92);
+  /* el halo dorado da brillo; la sombra oscura lo hace legible si pasa por el papel */
+  text-shadow:0 0 22px rgba(255,190,90,.55), 0 2px 10px rgba(0,0,0,.75);
   opacity:0;
   animation:whisper 24s ease-out var(--wd) infinite;
 }
+
+/* dónde nace cada palabra y cuándo (una cada 4 s) */
+.whispers span:nth-child(1){ --wx:17%; --wd:0s; }
+.whispers span:nth-child(2){ --wx:83%; --wd:4s; }
+.whispers span:nth-child(3){ --wx:26%; --wd:8s; }
+.whispers span:nth-child(4){ --wx:74%; --wd:12s; }
+.whispers span:nth-child(5){ --wx:21%; --wd:16s; }
+.whispers span:nth-child(6){ --wx:79%; --wd:20s; }
 /* 6 palabras, una cada 4 s; sube 250 px en ~3,8 s */
 @keyframes whisper{
-  0%   { opacity:0;  transform:translate3d(-50%,0,0)       scale(.86); }
-  2.5% { opacity:.95; transform:translate3d(-50%,-40px,0)  scale(1); }
-  9%   { opacity:.9;  transform:translate3d(-50%,-165px,0) scale(1.04); }
-  16%  { opacity:0;   transform:translate3d(-50%,-250px,0) scale(1.1); }
-  100% { opacity:0;   transform:translate3d(-50%,-250px,0) scale(1.1); }
+  0%   { opacity:0; transform:translate3d(-50%,0,0)       scale(.86); }
+  2.5% { opacity:1; transform:translate3d(-50%,-40px,0)   scale(1); }
+  10%  { opacity:1; transform:translate3d(-50%,-175px,0)  scale(1.04); }
+  16%  { opacity:0; transform:translate3d(-50%,-250px,0)  scale(1.1); }
+  100% { opacity:0; transform:translate3d(-50%,-250px,0)  scale(1.1); }
 }
 
 /* =========================================================
    ADAPTACIÓN A PANTALLAS
    ========================================================= */
 /* --- límite por ANCHO (el ramo mide 560 px) --- */
-@media (max-width:620px){ :root{ --kw:.98; } }
-@media (max-width:580px){ :root{ --kw:.93; } }
-@media (max-width:520px){ :root{ --kw:.84; } }
-@media (max-width:460px){ :root{ --kw:.74; --gutter:14px; } }
-@media (max-width:420px){ :root{ --kw:.68; --gutter:12px; } }
-@media (max-width:390px){ :root{ --kw:.62; --gutter:12px; } }
-@media (max-width:360px){ :root{ --kw:.57; --gutter:10px; } }
-@media (max-width:330px){ :root{ --kw:.51; --gutter:10px; } }
+@media (max-width:620px){ :root{ --kw:.92; } }
+@media (max-width:580px){ :root{ --kw:.86; } }
+@media (max-width:520px){ :root{ --kw:.76; } }
+@media (max-width:460px){ :root{ --kw:.66; --gutter:14px; } }
+@media (max-width:420px){ :root{ --kw:.60; --gutter:12px; } }
+@media (max-width:390px){ :root{ --kw:.56; --gutter:12px; } }
+@media (max-width:360px){ :root{ --kw:.52; --gutter:10px; } }
+@media (max-width:330px){ :root{ --kw:.47; --gutter:10px; } }
 
 /* --- límite por ALTO (ramo 640 px + títulos y mensajes) --- */
-@media (max-height:960px){ :root{ --kh:.97; } }
-@media (max-height:900px){ :root{ --kh:.89; } }
-@media (max-height:840px){ :root{ --kh:.80; } }
-@media (max-height:780px){ :root{ --kh:.71; } }
-@media (max-height:720px){ :root{ --kh:.62; } }
-@media (max-height:660px){ :root{ --kh:.52; } }
-@media (max-height:600px){ :root{ --kh:.44; } }
-@media (max-height:540px){ :root{ --kh:.35; } }
-@media (max-height:480px){ :root{ --kh:.27; } }
+@media (max-height:960px){ :root{ --kh:.92; } }
+@media (max-height:900px){ :root{ --kh:.84; } }
+@media (max-height:840px){ :root{ --kh:.76; } }
+@media (max-height:780px){ :root{ --kh:.68; } }
+@media (max-height:720px){ :root{ --kh:.58; } }
+@media (max-height:660px){ :root{ --kh:.49; } }
+@media (max-height:600px){ :root{ --kh:.41; } }
+@media (max-height:540px){ :root{ --kh:.33; } }
+@media (max-height:480px){ :root{ --kh:.26; } }
 
-/* en celular las palabras sueltas chocarían con el mensaje grande */
+/* --- en celular: menos aire alrededor, para que entre todo --- */
 @media (max-width:620px){
-  .whispers{ display:none; }
+  .stage{ padding:14px var(--gutter) 20px; }
+  .trigger:checked ~ .stage .reveal{ gap:2px; }
+  .titles{ margin-bottom:2px; }
+  .messages{ margin-top:2px; height:clamp(74px,15vw,104px); }
+  .footnote{ letter-spacing:.2em; }
+}
+
+/* en celular no hay sitio a los lados: las acerco al centro y las subo
+   un poco, para que no pisen el mensaje grande de abajo */
+@media (max-width:620px){
+  .whispers span{
+    bottom:21%;
+    font-size:clamp(24px,6.4vw,34px);
+  }
+  .whispers span:nth-child(1){ --wx:27%; }
+  .whispers span:nth-child(2){ --wx:73%; }
+  .whispers span:nth-child(3){ --wx:31%; }
+  .whispers span:nth-child(4){ --wx:69%; }
+  .whispers span:nth-child(5){ --wx:29%; }
+  .whispers span:nth-child(6){ --wx:71%; }
 }
 
 /* celular apaisado: el ramo estorba, se achica y se aprieta todo */
